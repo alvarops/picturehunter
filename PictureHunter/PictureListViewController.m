@@ -9,6 +9,10 @@
 #import "PictureListViewController.h"
 
 @interface PictureListViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *username;
+@property (weak, nonatomic) IBOutlet UITableView *myPicturesTable;
+
+- (IBAction)addPicture:(id)sender;
 
 @end
 
@@ -26,4 +30,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)addPicture:(id)sender {
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
+    
+    if (theTextField == self.username) {
+        
+        [theTextField resignFirstResponder];
+        
+    }
+    
+    return YES;
+    
+}
 @end

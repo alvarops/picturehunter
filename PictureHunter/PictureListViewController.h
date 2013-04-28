@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PictureListViewController : UIViewController
+@interface PictureListViewController : UIViewController <UITextFieldDelegate>
+@property (copy, nonatomic) NSString *userName;
 
 @end
